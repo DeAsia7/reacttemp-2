@@ -6,7 +6,7 @@ const [isClicked, setIsClicked] = useState(false);
 
 useEffect(() => {
     const interval = setInterval(() => {
-        setColor((previousColor) =. (previousColor === "red" ? "blue" : "red"));
+        setColor((previousColor) = (previousColor === "red" ? "blue" : "red"));
     } , 1000);
     },[])
 
