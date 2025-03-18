@@ -14,8 +14,5 @@ useEffect(() => {
         setColor((previousColor) => (previousColor === "red" ? "blue" : "red"));
     }
 );
-    }, [isClicked];
-
 }
-)
-}
+   // }, [isClicked];

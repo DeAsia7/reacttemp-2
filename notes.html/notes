@@ -1,0 +1,78 @@
+
+useEffect()
+const [submitted, setSubmitted] = useState(false);
+useEffect(() => {
+// Code here...
+}, [dependencies])
+// Runs Every Render (No Dependencies)
+
+useEffect(() => {
+// Code here...
+});
+// Runs Only Once, before the very first time that your website is rendered.
+
+useEffect(() => {
+}, []);
+// Runs when 'count' Changes
+
+useEffect(() => {
+}, [count]);
+// Runs when 'count' AND 'user' Changes
+
+useEffect(() => {
+}, [count, user]);
+
+condition ? value if true : value if false
+
+If apples are red, print Apples are $1. Otherwise, apples are $3.
+(apples === "red") ? appleValue = $1 : appleValue = $3
+
+If person is 18 or older, they can get into he club. Otherwise, they cannot.
+(person.age >= 18) ? accessClub = true : accessClub = false
+
+If the form has been submitted, render a paragraph saying that your
+message has been sent.
+Otherwise, render a name input and a submit button.
+(submitted is true) ? "Your message has been sent" : render input and button
+
+(submitted === true) ?
+(<p> Your message has been sent! </p>) :
+(<input type="text" placeholder="Enter your name"></input>
+<button type="submit">Submit</button>)
+
+If my array of visitors is greater than 10, render a message saying that the
+club is at max capacity. Otherwise, render a button that allows visitors
+to go in.
+(visitors.length > 10) ? (<p>The club is at max capacity!</p>) :
+<button>Come in</button>
+
+If my grocery list contains "apples", render a ordered list. Otherwise, render
+an unordered list.
+
+HINT: USE ARRAY METHODS. Check out lodash if necessary.
+
+const groceryList = ["bananas", "oranges", "milk", "apples"];
+groceryList.includes("apples") ? (
+<ol>
+{groceryList.map((item) => {
+<li>{item}</li>
+})}
+</ol>
+) : (
+<ul>
+{groceryList.map((item) => {
+<li>{item}</li>
+})}
+</ul>
+);
+We have a to-do list. If the list contains the word "urgent", you are going to
+create a div and inside that div call a JS alert ex alert("Urgent!").
+Otherwise, you will list the tasks using
+an unordered list.
+const tasks = ["urgent", "do the dishes", "feed the dog"];
+(tasks.includes("urgent")) ? (<div> {alert("Urgent!")} </div>) :
+(<ul>
+{tasks.map((task) {
+<li>{task}</li>
+})}
+</ul>)
