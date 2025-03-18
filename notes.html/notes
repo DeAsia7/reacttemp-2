@@ -1,6 +1,7 @@
 
 useEffect()
 const [submitted, setSubmitted] = useState(false);
+
 useEffect(() => {
 // Code here...
 }, [dependencies])
