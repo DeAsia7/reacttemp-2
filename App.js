@@ -17,6 +17,7 @@ function App() {
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/counter" element={<Counter/>}/>
         <Route path="/colorchange" element={<Colorchange/>}/>
+        <Route path="/calculator" element={<Calculator/>}/>
       </Routes>
       <Footer/>
     </Router>
