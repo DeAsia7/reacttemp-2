@@ -15,4 +15,6 @@ useEffect(() => {
     }
 );
 }
-   // }, [isClicked];
+
+export default Colorchange;
+

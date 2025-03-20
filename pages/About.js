@@ -11,7 +11,7 @@ function About() {
 <button onClick={() => setShowMore(!showMore)} > { showMore ? "Show Less" : "Show More"}</button>
 
 {showMore && (
-    <p>donuts</p>
+    <p>donuts make everyone happy and its our goal to keep you happy with every bite.</p>
 )}
 
     </div>

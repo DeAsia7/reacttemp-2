@@ -7,7 +7,7 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Counter from './pages/Counter'
 import Colorchange from './pages/Colorchange'
-import Calculator from './pages/Calculator'
+//import Calculator from './pages/Calculator'
 
 
 
