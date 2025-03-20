@@ -24,7 +24,7 @@ return (
         <button onClick= {() => setCount(count + 1)}>click me </button>
         <p>you have clicked {count} times</p>
 
-        <button onClick={addVisitor}></button>
+        <button onClick={addVisitor}>Register a new visitor</button>
 
         <h3>recent visitors</h3>
 

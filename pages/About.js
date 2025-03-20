@@ -4,7 +4,6 @@ function About() {
     const [showMore, setShowMore] = useState(false);
 
     return (
-
     <div>
         <h1>About us</h1>
         <p>holy molly donut shop</p>
