@@ -9,6 +9,8 @@ return (
         <li> <Link to="Home" style={styles.link}> Home </Link></li>
         <li> <Link to="./About" style={styles.link}> About Us</Link></li>
         <li> <Link to="./Contact" style={styles.link}> Contact Us</Link></li>
+        <li> <Link to="./Counter" style={styles.link}> Counter</Link></li>
+        
         </ul>
     </nav>
 );
