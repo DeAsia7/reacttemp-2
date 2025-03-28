@@ -42,8 +42,8 @@ setError("Login Fialed ", error);
     return (
         <div>
             <h2>Login</h2>
-            <input type="text" placeholder="Enter user..." onChange {(e) =>setUsername(e.target.value)}/>   
-            <input type="password" placeholder="Enter password..." onChange {(e) =>setPassword(e.target.value)}/>
+            <input type="text" placeholder="Enter user..." onChange ={(e) =>setUsername(e.target.value)}/>   
+            <input type="password" placeholder="Enter password..." onChange ={(e) =>setPassword(e.target.value)}/>
             <button onClick={handleLogin}>Login</button>
             {error && <p>{error}</p>}
         </div>
