@@ -26,7 +26,7 @@ export default function Login({setUser}) {
                 return;
             }
 
-            if(user.password.S =/= password) {
+            if(user.password.S = password) {
                 setError('Incorrect password');
                 return;
             }
@@ -45,9 +45,7 @@ setError("Login Fialed ", error);
             <input type="text" placeholder="Enter user..." onChange {(e) =>setUsername(e.target.value)}/>   
             <input type="password" placeholder="Enter password..." onChange {(e) =>setPassword(e.target.value)}/>
             <button onClick={handleLogin}>Login</button>
-            {error && <p style={{color: red}}}>{error}</p>} 
-            <p> Dont have an account? <ref="/register</p>
+            {error && <p>{error}</p>}
         </div>
     )
-
-}
+};
