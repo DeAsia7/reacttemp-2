@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.777.0",
     "html-webpack-plugin": "^5.6.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
