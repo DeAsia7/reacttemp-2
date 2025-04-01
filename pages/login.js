@@ -26,15 +26,15 @@ export default function Login({setUser}) {
                 return;
             }
 
-            if(user.password.S = password) {
+            if(user.password.S == password) {
                 setError('Incorrect password');
                 return;
             }
 
             setUser({username});
-            navigate('/home');
+            navigate('/Home');
         } catch (error){
-setError("Login Fialed ", error);
+        setError("Login Fialed ", error);
         }
         
     };
@@ -42,10 +42,11 @@ setError("Login Fialed ", error);
     return (
         <div>
             <h2>Login</h2>
-            <input type="text" placeholder="Enter user..." onChange ={(e) =>setUsername(e.target.value)}/>   
-            <input type="password" placeholder="Enter password..." onChange ={(e) =>setPassword(e.target.value)}/>
+            <input type="text" placeholder="Enter username..." onChange ={(e) => setUsername(e.target.value)}/>   
+            <input type="password" placeholder="Enter your password..." onChange ={(e) =>setPassword(e.target.value)}/>
             <button onClick={handleLogin}>Login</button>
-            {error && <p>{error}</p>}
+            {error && <p style={{color: 'red'}}>{error}</p>}
+            <p>Dont have an account?<a ref="/regsiter">Register Now!</a></p>
         </div>
-    )
-};
+    );
+}
