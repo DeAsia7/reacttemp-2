@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React,  { useState } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 import { GetItemCommand } from '@aws-sdk/client-dynamodb';
 import { client} from '../utils/awsClient';
 
@@ -26,7 +26,7 @@ export default function Login({setUser}) {
                 return;
             }
 
-            if(user.password.S == password) {
+            if(user.password.S !== password) {
                 setError('Incorrect password');
                 return;
             }
@@ -46,7 +46,7 @@ export default function Login({setUser}) {
             <input type="password" placeholder="Enter your password..." onChange ={(e) =>setPassword(e.target.value)}/>
             <button onClick={handleLogin}>Login</button>
             {error && <p style={{color: 'red'}}>{error}</p>}
-            <p>Dont have an account?<a ref="/regsiter">Register Now!</a></p>
+            <p>Dont have an account?<Link to="/regsiter">Register Now!</Link></p>
         </div>
     );
 }
