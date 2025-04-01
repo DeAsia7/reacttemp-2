@@ -10,7 +10,8 @@ function Counter(){
 
         return (
             <div>
-                <h2> Count: {count}</h2>
+                <h1>How many donuts would you like</h1>
+                <h3> Count: {count}</h3>
 <button onClick={() => setCount(count + 1)}>Add One!</button>
 <button onClick={() => setCount(count - 1)}>Subtract one!</button>
 

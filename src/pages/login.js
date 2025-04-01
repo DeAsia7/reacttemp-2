@@ -41,7 +41,7 @@ export default function Login({setUser}) {
 
     return (
         <div>
-            <h2>Login</h2>
+            <h2>Login To Your Holy Moly Donut Account</h2>
             <input type="text" placeholder="Enter username..." onChange ={(e) => setUsername(e.target.value)}/>   
             <input type="password" placeholder="Enter your password..." onChange ={(e) =>setPassword(e.target.value)}/>
             <button onClick={handleLogin}>Login</button>

@@ -19,7 +19,7 @@ function App() {
         <div>
       <Routes>
         <Route path="login" element={<Login setUser={setUser}/>} />
-       {/*<Route path="/register" element={<Register />} /> */}
+       {/* <Route path="/register" element={<Register />} /> */}
         <Route path="/Home" element={user ? <Home/> : <Navigate to="/login"/>}/>
         <Route path="*" element={<Navigate to= { user ? "/home" : "login" } />} />
         <Route path="/About" element={<About/>}/>
