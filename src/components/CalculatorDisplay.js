@@ -2,7 +2,7 @@ import React from 'react';
 
 function CalculatorDisplay({ value }) {
   return (
-    <div style={StyleSheet.display}>
+    <div style={styles.display}>
         {value}
     </div>
    
@@ -11,9 +11,9 @@ function CalculatorDisplay({ value }) {
 
 const styles = {
     display: {
-        backgroundColor: 'white',
+        backgroundColor: 'orange',
         color: 'green',
-        fontSize: '20%',
+        fontSize: '50px',
         padding: '10px',
         textAlign: 'right',
         marginButton: '10px',

@@ -3,7 +3,7 @@ import React from 'react';
 function CalculatorButton({ label, onClick }) {
   return (
     <div>
-    <button style={StyleSheet.button} onClick={() => onClick(label)}>{label}</button>
+    <button style={styles.button} onClick={() => onClick(label)}>{label}</button>
     </div>
   );
 }

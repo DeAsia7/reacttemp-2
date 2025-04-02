@@ -10,6 +10,7 @@ return (
         <li> <Link to="./About" style={styles.link}> About Us</Link></li>
         <li> <Link to="./Contact" style={styles.link}> Contact Us</Link></li>
         <li> <Link to="./Counter" style={styles.link}> Counter</Link></li>
+        <li> <Link to="./Calculator" style={styles.link}> Calculator</Link></li>
         
         </ul>
     </nav>
