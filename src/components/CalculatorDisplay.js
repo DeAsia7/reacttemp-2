@@ -2,10 +2,14 @@ import React from 'react';
 
 function CalculatorDisplay({ value }) {
   return (
-    <div style={styles.display}>
-        {value}
+    <div>
+      <div>
+        <h1>Lets calculate how much your donuts will be</h1>
+      </div>
+      <div style={styles.display}>
+          {value}
+      </div>
     </div>
-   
   );
 }
 
