@@ -10,13 +10,15 @@ const [result, setResult] = useState(null);
 
 useEffect(() => {
     const savedResult = localStorage.getItem("lastResult");
-    if (savedResult) {
-        setResult(savedResult);
+    if (savedResult) setResult(savedResult);
+
+},[]);
+
+useEffect(() => {
+    if (result != null) {
+        localStorage.setItem("lastResult", result);
     }
-}
-
-
-)
+}, [result]);
 
 const handleClick = (value) => { 
     if(value === "=") {
@@ -31,6 +33,7 @@ const handleClick = (value) => {
     } else if(value === "C") {
         setInput("");
         setResult(null);
+
     } else {
         setInput(input + value);
 
