@@ -7,11 +7,12 @@ function About() {
     <div>
         <h1>About us</h1>
         <p>holy molly donut shop</p>
+        <p>donuts make everyone happy and its our goal to keep you happy with every bite.</p>
 
 <button onClick={() => setShowMore(!showMore)} > { showMore ? "Show Less" : "Show More"}</button>
 
 {showMore && (
-    <p>donuts make everyone happy and its our goal to keep you happy with every bite.</p>
+    <p>If you see this secret message, you get a free donut! </p>
 )}
 
     </div>
