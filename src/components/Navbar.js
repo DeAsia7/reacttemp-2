@@ -11,8 +11,8 @@ return (
         <li> <Link to="./Contact" style={styles.link}> Contact Us</Link></li>
         <li> <Link to="./Counter" style={styles.link}> Counter</Link></li>
         <li> <Link to="./Calculator" style={styles.link}> Calculator</Link></li>
-        
         </ul>
+        { user && <button onClick={handleLogout}>Logout</button>}
     </nav>
 );
 
