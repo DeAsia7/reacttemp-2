@@ -30,4 +30,9 @@ module.exports = {
   devServer: {
     static: './dist',
   },
+  {
+    test: /.css$/,
+    use: ['style-loader', 'css-loader', 'postcss-loader'],
+    },
+
 };
