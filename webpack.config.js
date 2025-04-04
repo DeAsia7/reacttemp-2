@@ -6,7 +6,6 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-  },
   mode: 'development',
   module: {
     rules: [
@@ -30,9 +29,5 @@ module.exports = {
   devServer: {
     static: './dist',
   },
-  {
-    test: /.css$/,
-    use: ['style-loader', 'css-loader', 'postcss-loader'],
-    },
-
+},
 };
