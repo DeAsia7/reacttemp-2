@@ -1,8 +1,15 @@
 import React from 'react';
 
-import {Link} from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 
-function Navbar(){
+function Navbar( { user, setUser }) {
+    const navigate = useNavigate();
+
+    const handleLogout = () => {
+        setUser(null);
+        navigate('/login');
+    }
+    
 return (
     <div className= "flex justify-center items-center bg-gray-100">
     <nav style={styles.navbar}>
@@ -11,7 +18,7 @@ return (
         <li> <Link to="./About" style={styles.link}> About Us</Link></li>
         <li> <Link to="./Contact" style={styles.link}> Contact Us</Link></li>
         <li> <Link to="./Counter" style={styles.link}> Counter</Link></li>
-        <li> <link to="/Colorchange" style={styles.link}> Colorchange</link></li>
+        <li> <link to=".Colorchange" style={styles.link}> Colorchange</link></li>
         <li> <Link to="./Calculator" style={styles.link}> Calculator</Link></li>
         
         </ul>
