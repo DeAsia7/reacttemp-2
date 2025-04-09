@@ -23,7 +23,7 @@ jest.mocmk('react-router-dom', () => ({
 describe ('Login component', () => {
     test ('display message login failed on AWS Error', async () => {
         client.sendmockRejectionValueOnce(new Error('AWS Error'));
-        render(<Login setUser={mosckSetUser} />, {
+        render(<Login setUser={mockSetUser} />, {
             wrapper: MemoryRouter,
             fireEvent.change(screen.getByPlaceholderText('Username'), {
                 target: {value: 'DeAsia'},
@@ -34,5 +34,8 @@ describe ('Login component', () => {
         });
 
         fireEvent.click(screen.getByText('Login'));
+        await waitFor(() => {
+            expect(screen.getByText('Login failed')).toBeInTheDocument();
+        });
 
-        )})}
+        
