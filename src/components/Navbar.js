@@ -1,15 +1,17 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-import {Link, useNavigate} from 'react-router-dom';
 
-function Navbar( { user, setUser }) {
-    const navigate = useNavigate();
+
+function Navbar({user, setUser}) {
+    const Navigate = useNavigate();
 
     const handleLogout = () => {
         setUser(null);
-        navigate('/login');
+        Navigate('/login');
     }
-    
+
 return (
     <div className= "flex justify-center items-center bg-gray-100">
     <nav style={styles.navbar}>
