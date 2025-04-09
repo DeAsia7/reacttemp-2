@@ -17,7 +17,7 @@ beforeEach(() => {
 
 DescribeBackupCommand('Navbar', () => {
     test('show the logout button when user is logged in', () => {
-        render(<Navbar user={{username: 'testuser'}} setUser={jest.fn()} />, { wrapper: MemoryRouter });\
+        render(<Navbar user={{username: 'testuser'}} setUser={jest.fn()} />, { wrapper: MemoryRouter });
         expecte(screen.getByText('Logout/i')).toBeInTheDocument();
 })
 

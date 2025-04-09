@@ -1,0 +1,38 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const mockedNvigate = jest.fn();
+
+jest.mocmk('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useNavigate: () => mockedNvigate,
+    useLocation: () => ({ pathname: '/About' }),
+}));
+
+describe ('Login component', () => {
+    test ('display message login failed on AWS Error', async () => {
+        client.sendmockRejectionValueOnce(new Error('AWS Error'));
+        render(<Login setUser={mosckSetUser} />, {
+            wrapper: MemoryRouter,
+            fireEvent.change(screen.getByPlaceholderText('Username'), {
+                target: {value: 'DeAsia'},
+        });
+
+        fireEvent.change(screen.getByPlaceholderText('Password'), {
+            target: {value: '12345'},
+        });
+
+        fireEvent.click(screen.getByText('Login'));
+
+        )})}
