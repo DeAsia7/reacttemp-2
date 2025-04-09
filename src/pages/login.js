@@ -46,7 +46,7 @@ export default function Login({setUser}) {
             <input className="w-full p-2 border border-gray-300 rounded mb-4" type="password" placeholder="Enter your password..." onChange ={(e) =>setPassword(e.target.value)}/>
             <button className=" w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600" onClick={handleLogin}>Login</button>
             {error && <p style={{color: 'red'}}>{error}</p>}
-            <p>Dont have an account?<Link to="/register">Register Now!</Link></p>
+            <p>Dont have a Holy Moly account?<Link to="/register">Register Now!</Link></p>
         </div>
     );
 }

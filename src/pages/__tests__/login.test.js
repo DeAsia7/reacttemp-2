@@ -27,15 +27,20 @@ describe ('Login component', () => {
             wrapper: MemoryRouter,
             fireEvent.change(screen.getByPlaceholderText('Username'), {
                 target: {value: 'DeAsia'},
-        });
+        })
 
         fireEvent.change(screen.getByPlaceholderText('Password'), {
             target: {value: '12345'},
-        });
+        })
 
         fireEvent.click(screen.getByText('Login'));
         await waitFor(() => {
             expect(screen.getByText('Login failed')).toBeInTheDocument();
-        });
+        })
+    })
+})
+})
 
-        
+
+
+
