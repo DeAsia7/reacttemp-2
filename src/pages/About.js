@@ -5,9 +5,10 @@ function About() {
 
     return (
     <div>
-        <h1>About us</h1>
+        <h1 text-align="center">  About Holy Moly Donut</h1>
         <p>holy moly donut shop has been around for generations and we're proud to say its made from scratch. Every morning a new batch is made and if we have any left over by the end of the day, we will try our best to hand them to someone in need.  </p>
-        <p>donuts make everyone happy and its our goal to keep you happy with every bite.</p>
+        <h2>Our Goal</h2>
+        <p>Donuts make everyone happy and we want to make sure you're satifised with every bite.</p>
 
 <button onClick={() => setShowMore(!showMore)} > { showMore ? "Show Less" : "Show More"}</button>
 
