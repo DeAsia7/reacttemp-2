@@ -6,6 +6,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
+  },
   mode: 'development',
   module: {
     rules: [
@@ -16,6 +17,10 @@ module.exports = {
           loader: 'babel-loader',
         },
       },
+      {
+        test: /.css$/,
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
+        },
     ],
   },
   resolve: {
@@ -29,5 +34,6 @@ module.exports = {
   devServer: {
     static: './dist',
   },
-},
+  
+
 };

@@ -20,7 +20,7 @@ return (
         <li> <Link to="./About" style={styles.link}> About Us</Link></li>
         <li> <Link to="./Contact" style={styles.link}> Contact Us</Link></li>
         <li> <Link to="./Counter" style={styles.link}> Counter</Link></li>
-        <li> <link to=".Colorchange" style={styles.link}> Colorchange</link></li>
+        <li> <Link to=".Colorchange" style={styles.link}> Colorchange</Link></li>
         <li> <Link to="./Calculator" style={styles.link}> Calculator</Link></li>
         
         </ul>
