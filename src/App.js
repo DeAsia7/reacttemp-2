@@ -10,6 +10,7 @@ import Colorchange from './pages/Colorchange'
 import Calculator from './pages/Calculator'
 import Login from './pages/login'
 import Register from './pages/Register'
+import {LockKeyhole} from 'lucide-react';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <Router>
+    
         <Navbar/>
         <div>
       <Routes>
@@ -42,6 +44,7 @@ function App() {
         <Route path="/calculator" element={ user ? <Calculator/> : <Navigate to ="/login" />}/> 
       </Routes>
       </div>
+     
       <Footer/>
     </Router>
   )
