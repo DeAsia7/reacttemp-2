@@ -5,7 +5,7 @@ import '@testing-library/react'
 import {client} from '../../utils/awsClient';
 import {MemoryRouter} from 'react-router-dom';
 
-jest.mock('../utils/awsClient', () => ({
+jest.mock('react-router-dom', () => ({
     client: {
         send: jest.fn(),
     },
@@ -17,12 +17,12 @@ jest.mock('react-router-dom', () => ({
     useNavigate: () => mockedNavigate,
 }));
 
-DescribeBackupCommand('Register component', () => {
+describe('Register component', () => {
     beforeEach(() => {
         jest.clearAllMocks();
     });
 
-    test('showsn error if password is weak', async () => {
+    test('show error if password is weak', async () => {
         render(<Register />, { wrapper: MemoryRouter });
 
         fireEvent.change(screen.getByPlaceholderText('/Enter your username/i'), {

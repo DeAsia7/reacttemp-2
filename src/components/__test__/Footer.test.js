@@ -22,7 +22,7 @@ expect(footerElement).toBeInTheDocument();
 test('has the correct tailwind class names', () => {
 const { container } = render(<Footer />);
 const footerElement = container.querySelector('footer');
-expect(footerElement).toHaveClass('bg-purple-200, text-center, py-4, text-md, text-green-900');
+expect(footerElement).toHaveClass('bg-purple-200 text-center py-4 text-md text-green-900');
 });
 
 });
