@@ -15,8 +15,8 @@ function Navbar({user, setUser}) {
 return (
     <div >
     <nav
-className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 font-semibold hover:scale-105 transition-transform">
-        <ul>
+className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-500 font-semibold hover:scale-105 transition-transform">
+        <ul className="text-center ">
         <li> <Link to="Home"> <span className= 'font-semibold text-red-5000 italic'> Home </span></Link></li>
         <li> <Link to="./About"> About Us</Link></li>
         <li> <Link to="./Contact"> Contact Us</Link></li>
