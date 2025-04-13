@@ -1,4 +1,4 @@
-import Rreact, { act } from 'react';
+import React, { act } from 'react';
 
 import ColorChange from '../Colorchange';
 import '@testing-library/jest-dom';
@@ -22,7 +22,7 @@ describe('ColorChange Page', () => {
 
     });
 
-    test('changes color to blue after 3 seconds', () => {
+    test('changes color to blue after 5 seconds', () => {
         render(<ColorChange />);
         act(() => {
             jest.advanceTimersByTime(3000);

@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, scree, fireEvent, waitfor } from '@testing-library/react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import Register from '../Register';
 import 'Testing-Library/jest-dom';
 import {client} from '../../utils/awsClient';

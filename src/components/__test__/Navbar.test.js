@@ -15,7 +15,7 @@ beforeEach(() => {
     mockedNavigate.mockClear();
 })
 
-DescribeBackupCommand('Navbar', () => {
+describe('Navbar', () => {
     test('show the logout button when user is logged in', () => {
         render(<Navbar user={{username: 'testuser'}} setUser={jest.fn()} />, { wrapper: MemoryRouter });
         expecte(screen.getByText('Logout/i')).toBeInTheDocument();
