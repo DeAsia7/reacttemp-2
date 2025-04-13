@@ -18,19 +18,21 @@ const addVisitor = () => {
 }
 
 return (
-    <div>
-        <h1>welcome</h1>
-        <p> click the button below to increase the counter</p>
-        <button onClick= {() => setCount(count + 1)}>click me </button>
+    <div className="min-h-screen bg-gray-100 flex flex-col justify-center items-center px-4">
+        <div className="bg-white px-8 rounded shadow-md max-w-xl w-full text-center">
+        <h1 className="text-3xl font-bold bf-gradient-to-r from-blue-400 to-orange-300 mb-4">welcome</h1>
+        <p className="text-green-200 md-6"> click the button below to increase the counter</p>
+        <button onClick= {() => setCount(count + 1)} className="bg-pink-400 hover:bg-oink-500 text-black px-4 py-2 rounded-lg shadow md-6">click me </button>
         <p>you have clicked {count} times</p>
 
-        <button onClick={addVisitor}>Register a new visitor</button>
+        <button onClick={addVisitor} className="bg-pink-400 hover:bg-oink-500 text-black px-4 py-2 rounded-lg shadow md-6"   >Register a new visitor</button>
 
-        <h3>recent visitors</h3>
+        <h3 className="text-xl font-bold ">recent visitors</h3>
 
         <ul>
          {visitors.map((visitor, index) => (<li key={index}>{visitor}</li>))}
         </ul>
+    </div>
     </div>
  );
 

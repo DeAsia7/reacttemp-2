@@ -13,15 +13,16 @@ function Navbar({user, setUser}) {
     }
 
 return (
-    <div className= "flex justify-center items-center bg-gray-100">
-    <nav style={styles.navbar}>
-        <ul style={styles.navlist}>
-        <li> <Link to="Home" style={styles.link}> <span className= 'font-semibold text-red-5000 italic'> Home </span></Link></li>
-        <li> <Link to="./About" style={styles.link}> About Us</Link></li>
-        <li> <Link to="./Contact" style={styles.link}> Contact Us</Link></li>
-        <li> <Link to="./Counter" style={styles.link}> Counter</Link></li>
-        <li> <Link to=".Colorchange" style={styles.link}> Colorchange</Link></li>
-        <li> <Link to="./Calculator" style={styles.link}> Calculator</Link></li>
+    <div >
+    <nav
+className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 font-semibold hover:scale-105 transition-transform">
+        <ul>
+        <li> <Link to="Home"> <span className= 'font-semibold text-red-5000 italic'> Home </span></Link></li>
+        <li> <Link to="./About"> About Us</Link></li>
+        <li> <Link to="./Contact"> Contact Us</Link></li>
+        <li> <Link to="./Counter"> Counter</Link></li>
+        <li> <Link to=".Colorchange"> Colorchange</Link></li>
+        <li> <Link to="./Calculator"> Calculator</Link></li>
         
         </ul>
         { user && <button onClick={handleLogout}>Logout</button> } 
@@ -29,24 +30,5 @@ return (
     </nav>
     </div>
 );
-
-}
-
-const styles = {
-    navbar: {
-        backgroundColor: "purple",
-        padding: "10px"
-    }, 
-    navlist: {
-        liststyle: "none",
-        display: "flex",
-        justifyContent: "space-around",
-        passing: "0",
-    },
-    link:{
-        color: "white",
-        fontSize: "20px",
-    },
 };
-
 export default Navbar;
