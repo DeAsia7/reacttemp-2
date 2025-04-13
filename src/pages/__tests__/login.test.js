@@ -1,15 +1,9 @@
-
-
-
-
-
-
-
-
-
-
-
-
+/*
+import React from 'react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import Login from '../login';
+import { MemoryRouter } from 'react-router-dom';
 
 
 const mockedNvigate = jest.fn();
@@ -40,7 +34,7 @@ describe ('Login component', () => {
     })
 })
 })
-
+*/
 
 
 

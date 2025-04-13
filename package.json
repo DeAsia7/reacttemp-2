@@ -43,7 +43,10 @@
     "whatwg-fetch": "^3.6.20"
   },
   "jest": {
-    "testingEnvironment": "jsdom"
+    "testingEnvironment": "jsdom",
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/setupTests.js"
+    ]
   },
   "repository": {
     "type": "git",

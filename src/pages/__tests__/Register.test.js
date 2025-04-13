@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import Register from '../Register';
-import 'Testing-Library/jest-dom';
+import '@testing-library/react'
 import {client} from '../../utils/awsClient';
 import {MemoryRouter} from 'react-router-dom';
 

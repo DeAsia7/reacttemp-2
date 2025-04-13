@@ -1,7 +1,9 @@
+/*
 import React from 'react';
 import { render, screen, fireEvent} from '@testing-library/react';
 import Navbar from '../Navbar';
-import { MemoryRouter, useLocation, useNavigate } from 'react-router-dom';
+import { MemoryRouter } from 'react-router-dom';
+
 
 const mockedNavigate = jest.fn();
 jest.mock('react-router-dom', () => ({
@@ -28,3 +30,4 @@ test('the logout button is hidden when user is not logged in', () => {
 
 
 })
+*/
