@@ -32,6 +32,8 @@ export default function Login({setUser}) {
             }
 
             setUser({username});
+            localStorage.setItem('loggeduser', JSON.stringify({username}))
+        
             navigate('/Home');
         } catch (error){
         setError("Login Failed Try again", error);
