@@ -34,7 +34,7 @@ export default function Login({setUser}) {
             setUser({username});
             navigate('/Home');
         } catch (error){
-        setError("Login Failed ", error);
+        setError("Login Failed Try again", error);
         }
         
     };

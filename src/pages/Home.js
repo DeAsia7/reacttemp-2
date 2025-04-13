@@ -13,7 +13,7 @@
 const addVisitor = () => {
     //alter the value of visitirs, im going to setVisitors
 
-    setVisitors([...visitors, 'Visitor ${visitors.length + 1}']);
+    setVisitors([...visitors, `Visitor ${visitors.length + 1}`]);
 
 }
 
@@ -25,7 +25,7 @@ return (
         <button onClick= {() => setCount(count + 1)} className="bg-pink-400 hover:bg-oink-500 text-black px-4 py-2 rounded-lg shadow md-6">click me </button>
         <p>you have clicked {count} times</p>
 
-        <button onClick={addVisitor} className="bg-pink-400 hover:bg-oink-500 text-black px-4 py-2 rounded-lg shadow md-6"   >Register a new visitor</button>
+        <button onClick={addVisitor} className="bg-pink-400 hover:bg-oink-500 text-black px-4 py-2 rounded-lg shadow md-6">Register a new visitor</button>
 
         <h3 className="text-xl font-bold ">recent visitors</h3>
 

@@ -17,7 +17,8 @@ return (
 <h1>Contact Us</h1>
 
 
-{submitted ? (<div>
+{submitted ? (
+    <div>
     <h2>Thank you for contacting us {name}!</h2>
     <p>We will get back to you shortly. Please keep an eye on your inbox at {email} </p>
     <button onClick={() => setSubmitted(false)}> Send another message</button>
@@ -27,7 +28,7 @@ return (
 
 <div>
     <label>Name</label>
-    <input type = "text" value= {name} onChange= {(e)=> setName(e.target.value)} required/>
+    <input  type = "text" value= {name} onChange= {(e)=> setName(e.target.value)} required/>
 </div>
 
 <div>
