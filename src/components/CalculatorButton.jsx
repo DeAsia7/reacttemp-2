@@ -2,7 +2,7 @@ import React from 'react';
 
 function CalculatorButton({ label, onClick }) {
   return (
-    <div>
+    <div className="">
     <button onClick={() => onClick(label)}>{label}</button>
     </div>
   );
