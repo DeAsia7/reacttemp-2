@@ -41,11 +41,18 @@ const handleClick = (value) => {
 };
 
 return(
-    <div style={styles.container}>
+    <div className="width-300px,
+        margin-50px-auto,
+        padding-10px,
+        br-10px,
+        bc-lightgray,
+        textAlign-center">
         <CalculatorDisplay value={input || result || "0" }  />
 
         <div
-            style={ styles.buttonGrid} >
+            className=" display-grid,
+        gridTemplateColumns-repeat(4, 1fr),
+        gridGap-10px" >
                 {["7", "8", "9", "/"].map((labelItem) => ( 
                     <CalculatorButton Key={labelItem} label={labelItem} onClick={handleClick} /> 
                 ))}
@@ -64,22 +71,6 @@ return(
 );
 }
 
-
-const styles = {
-    container: {
-        width: "300px",
-        margin: "50px auto",
-        padding: "10px",
-        borderRadius: "10px",
-        backgroundcolor: "lightgray",
-        textAlign: "center",
-    },
-    buttonGrid: {
-        display: "grid",
-        gridTemplateColumns: "repeat(4, 1fr)",
-        gridGap: "10px",
-    },
-}
 
 
 

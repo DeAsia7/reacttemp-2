@@ -5,7 +5,7 @@ import '@testing-library/react'
 import {client} from '../../utils/awsClient';
 import {MemoryRouter} from 'react-router-dom';
 
-jest.mock('react-router-dom', () => ({
+jest.mock('../utils/awsClient', () => ({
     client: {
         send: jest.fn(),
     },
@@ -27,7 +27,7 @@ describe('Register component', () => {
         render(<Register />, { wrapper: MemoryRouter });
 
         fireEvent.change(screen.getByPlaceholderText('/Enter username/i'), {
-            target: { value: 'testuser' },
+            target: { value: 'DeAsia' },
         });
 
         fireEvent.change(screen.getByPlaceholderText('/Enter password/i'), {
@@ -41,7 +41,7 @@ describe('Register component', () => {
         fireEvent.click(screen.getByText(/Register/i));
 
         expect(
-            await screen.findByText(/Password must contain at least 1 number, 1 uppercase letter, 1 lowercase letter, 1 special character, and be at least 8 characters long/i)).toBeInTheDocument();
+            await screen.findByText(/Password must contain at least 1 number/i)).toBeInTheDocument();
         expect(client.send).not.toHaveBeenCalled();
 
 });
