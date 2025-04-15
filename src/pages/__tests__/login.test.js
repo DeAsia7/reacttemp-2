@@ -8,7 +8,7 @@ import { MemoryRouter } from 'react-router-dom';
 
 const mockedNvigate = jest.fn();
 
-jest.mocmk('react-router-dom', () => ({
+jest.mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),
     useNavigate: () => mockedNvigate,
     useLocation: () => ({ pathname: '/About' }),
@@ -16,9 +16,9 @@ jest.mocmk('react-router-dom', () => ({
 
 describe ('Login component', () => {
     test ('display message login failed on AWS Error', async () => {
-        client.sendmockRejectionValueOnce(new Error('AWS Error'));
-        render(<Login setUser={mockSetUser} />, {
-            wrapper: MemoryRouter,
+        client.send.mockRejectionValueOnce(new Error('AWS Error'));
+        render(<Login setUser={mockSetUser} />, 
+            { wrapper: MemoryRouter,
             fireEvent.change(screen.getByPlaceholderText('Username'), {
                 target: {value: 'DeAsia'},
         })

@@ -5,7 +5,7 @@ import '@testing-library/react'
 import {client} from '../../utils/awsClient';
 import {MemoryRouter} from 'react-router-dom';
 
-jest.mock('../utils/awsClient', () => ({
+jest.mock('../../utils/awsClient', () => ({
     client: {
         send: jest.fn(),
     },
@@ -22,6 +22,7 @@ describe('Register component', () => {
     beforeEach(() => {
         jest.clearAllMocks();
     });
+});
 
     test('show error if password is weak', async () => {
         render(<Register />, { wrapper: MemoryRouter });
@@ -45,4 +46,25 @@ describe('Register component', () => {
         expect(client.send).not.toHaveBeenCalled();
 
 });
-})
+test('succesful registration and send request to DynamoDB and navigate', async () => {
+    client.send.mockResolvedValueOnce({});
+
+    render(<Register />, { wrapper: MemoryRouter });
+
+    fireEvent.change(screen.getByPlaceholderText('/Enter username/i'), {
+        target: { value: 'DeAsia' },
+    });
+
+    fireEvent.change(screen.getByPlaceholderText('/Enter password/i'), {
+        target: { value: 'DeAsia19!' },
+    });
+
+     fireEvent.change(screen.getByPlaceholderText('/Confirm password/i'), {
+    target: { value: 'DeAsia19!' },
+});
+    await waitFor(() => {
+    expect(client.send).toHaveBeenCalled();
+    expect(mockedNavigate).toHaveBeenCalledWith('/login');
+});
+
+});

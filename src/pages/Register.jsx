@@ -68,7 +68,7 @@ return (
         <input  type="text" placeholder="Enter username..." onChange ={(e) => setUsername(e.target.value)}/>   
         <input  type="password" placeholder="Enter your password..." onChange ={(e) =>setPassword(e.target.value)}/>
         <input  type="password" placeholder="Confirm your password..." onChange ={(e) =>setConfirm(e.target.value)}/>
-        <button onClick={handleRegister}>Register</button>
+        <button onClick={handleRegister}>Lets Create An Account!</button>
         {error && <p style={{color: 'red'}}>{error}</p>}
     </div>
 

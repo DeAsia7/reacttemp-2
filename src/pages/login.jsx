@@ -47,7 +47,7 @@ export default function Login({setUser}) {
             <h2 className="text-xl font-bold md-6 text-center ">Login To Your Holy Moly Donut Account</h2>
             <input className="w-full p-2 border border-gray-300 rounded mb-4" type="text" placeholder="Enter username..." onChange ={(e) => setUsername(e.target.value)}/>   
             <input className="w-full p-2 border border-gray-300 rounded mb-4" type="password" placeholder="Enter your password..." onChange ={(e) =>setPassword(e.target.value)}/>
-            <button className=" w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600" onClick={handleLogin}>Login</button>
+            <button className=" w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600" onClick={handleLogin}>Login Now</button>
             {error && <p style={{color: 'red'}}>{error}</p>}
             <h1 className="text-xl font-bold md-6 text-center" >Dont have a Holy Moly account?</h1>
            <button className=" bg-indigo-900 text-white p-2 rounded hover:bg-yellow-400"><Link to="/register">Register Now!</Link></button>
