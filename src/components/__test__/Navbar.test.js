@@ -1,4 +1,4 @@
-/*
+
 import React from 'react';
 import { render, screen, fireEvent} from '@testing-library/react';
 import Navbar from '../Navbar';
@@ -20,7 +20,7 @@ beforeEach(() => {
 describe('Navbar', () => {
     test('show the logout button when user is logged in', () => {
         render(<Navbar user={{username: 'testuser'}} setUser={jest.fn()} />, { wrapper: MemoryRouter });
-        expecte(screen.getByText('Logout/i')).toBeInTheDocument();
+        expect(screen.getByText('Logout/i')).toBeInTheDocument();
 })
 
 test('the logout button is hidden when user is not logged in', () => {
@@ -30,4 +30,3 @@ test('the logout button is hidden when user is not logged in', () => {
 
 
 })
-*/

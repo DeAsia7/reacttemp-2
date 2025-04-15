@@ -11,6 +11,7 @@ jest.mock('react-router-dom', () => ({
     },
 }));
 
+
 const mockedNavigate = jest.fn();
 jest.mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),
@@ -25,15 +26,15 @@ describe('Register component', () => {
     test('show error if password is weak', async () => {
         render(<Register />, { wrapper: MemoryRouter });
 
-        fireEvent.change(screen.getByPlaceholderText('/Enter your username/i'), {
+        fireEvent.change(screen.getByPlaceholderText('/Enter username/i'), {
             target: { value: 'testuser' },
         });
 
-        fireEvent.change(screen.getByPlaceholderText('/Enter your password/i'), {
+        fireEvent.change(screen.getByPlaceholderText('/Enter password/i'), {
             target: { value: '12345' },
         });
 
-        fireEvent.change(screen.getByPlaceholderText('/Confirm your password/i'), {
+        fireEvent.change(screen.getByPlaceholderText('/Confirm password/i'), {
             target: { value: '12345' },
         });
 

@@ -1,4 +1,4 @@
-/*
+
 import React from 'react';
 import ColorChange from '../Colorchange';
 import '@testing-library/jest-dom';
@@ -39,4 +39,4 @@ describe('ColorChange Page', () => {
     })
 
     })
-    */
+    
