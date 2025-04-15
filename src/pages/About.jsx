@@ -5,9 +5,9 @@ function About() {
 
     return (
        
-    <div className="grid grid-cols-3 divide-x divide-green-500 divide-solid">
+    <div className="grid grid-cols-3 divide-x divide-green-500 ">
        
-        <div><h1 className="text-3xl mb-4">  About Holy Moly Donut</h1>
+        <div><h1 className="text-3xl mb-4">  About Us</h1>
         <p >holy moly donut shop has been around for generations and we're proud to say its made from scratch. </p>
         </div>
         <div><h1 className="text-3xl mb-4"> Our Community </h1>
@@ -17,7 +17,7 @@ function About() {
         <p> We want to ensure with every bite you take, you're satifised!</p>
         </div>
         
-<div>
+<div >
 <button onClick={() => setShowMore(!showMore)}  className=" bg-indigo-900 text-white p-2 rounded hover:bg-green-900 " > { showMore ? "Show Less" : "Mystery Button"}</button>
 
 {showMore && (

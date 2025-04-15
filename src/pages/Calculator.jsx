@@ -44,7 +44,7 @@ return(
     <div>
         <CalculatorDisplay value={input || result || "0" }  />
 
-        <div className="text-xl flex w-60px h-60px rounded-md justify-center border-solid  ">
+        <div className="text-xl grid grid-cols-4 ">
         
                 {["7", "8", "9", "/"].map((labelItem) => ( 
                     <CalculatorButton Key={labelItem} label={labelItem} onClick={handleClick} /> 
