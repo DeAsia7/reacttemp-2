@@ -12,7 +12,7 @@ useEffect(() => {
     } , 1000);
     },[])
 
-    useffect(() => {
+    useEffect(() => {
         setColor((previousColor) => (previousColor === "red" ? "blue" : "red"));
     }
 );

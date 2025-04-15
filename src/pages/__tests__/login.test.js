@@ -4,8 +4,16 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Login from '../login';
 import { MemoryRouter } from 'react-router-dom';
+import {client} from '../../utils/awsClient';
+
+jest.mock('../../utils/awsClient', () => ({
+    client:{
+    send: jest.fn(),
+    }
+}));
 
 
+const mockSetUser = jest.fn();
 const mockedNvigate = jest.fn();
 
 jest.mock('react-router-dom', () => ({
@@ -16,24 +24,27 @@ jest.mock('react-router-dom', () => ({
 
 describe ('Login component', () => {
     test ('display message login failed on AWS Error', async () => {
-        client.send.mockRejectionValueOnce(new Error('AWS Error'));
+       client.send.mockRejectionValueOnce(new Error('AWS Error'));
         render(<Login setUser={mockSetUser} />, 
-            { wrapper: MemoryRouter,
+            //make sure to close the MemoryRouter
+            { wrapper: MemoryRouter});
             fireEvent.change(screen.getByPlaceholderText('username'), {
                 target: {value: 'DeAsia'},
-        })
+        });
 
         fireEvent.change(screen.getByPlaceholderText('password'), {
             target: {value: 'DeAsia19!'},
-        })
+        });
 
         fireEvent.click(screen.getByText('Login'));
         await waitFor(() => {
-            expect(screen.getByText('Login failed')).toBeInTheDocument();
-        })
-    })
-})
-})
+            expect(screen.getByText(/Login failed/i)).toBeInTheDocument();
+        });
+        expect(mockSetUser).not.toHaveBeenCalled();
+        expect(mockedNvigate).not.toHaveBeenCalled();
+    });
+});
+
 
 
 

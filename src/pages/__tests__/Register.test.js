@@ -22,20 +22,19 @@ describe('Register component', () => {
     beforeEach(() => {
         jest.clearAllMocks();
     });
-});
 
     test('show error if password is weak', async () => {
         render(<Register />, { wrapper: MemoryRouter });
 
-        fireEvent.change(screen.getByPlaceholderText('/Enter username/i'), {
+        fireEvent.change(screen.getByPlaceholderText(/Enter username/i), {
             target: { value: 'DeAsia' },
         });
 
-        fireEvent.change(screen.getByPlaceholderText('/Enter password/i'), {
+        fireEvent.change(screen.getByPlaceholderText(/Enter your password/i), {
             target: { value: '12345' },
         });
 
-        fireEvent.change(screen.getByPlaceholderText('/Confirm password/i'), {
+        fireEvent.change(screen.getByPlaceholderText(/Confirm your password/i), {
             target: { value: '12345' },
         });
 
@@ -44,22 +43,22 @@ describe('Register component', () => {
         expect(
             await screen.findByText(/Password must contain at least 1 number/i)).toBeInTheDocument();
         expect(client.send).not.toHaveBeenCalled();
-
+        });
 });
-test('succesful registration and send request to DynamoDB and navigate', async () => {
+     test('succesful registration and send request to DynamoDB and navigate', async () => {
     client.send.mockResolvedValueOnce({});
 
     render(<Register />, { wrapper: MemoryRouter });
 
-    fireEvent.change(screen.getByPlaceholderText('/Enter username/i'), {
+    fireEvent.change(screen.getByPlaceholderText(/Enter username/i), {
         target: { value: 'DeAsia' },
     });
 
-    fireEvent.change(screen.getByPlaceholderText('/Enter password/i'), {
+    fireEvent.change(screen.getByPlaceholderText(/Enter your password/i), {
         target: { value: 'DeAsia19!' },
     });
 
-     fireEvent.change(screen.getByPlaceholderText('/Confirm password/i'), {
+     fireEvent.change(screen.getByPlaceholderText(/Confirm your password/i), {
     target: { value: 'DeAsia19!' },
 });
     fireEvent.click(screen.getByText(/Lets Create An Account!/i));
@@ -71,3 +70,5 @@ test('succesful registration and send request to DynamoDB and navigate', async (
 });
 
 });
+
+

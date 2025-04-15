@@ -7,7 +7,7 @@ describe('About component', () => {
     test('render "Show More" button initially', () => {
         render(<About />);
         const button = screen.getByRole('button');
-        expect(button).toHaveTextContent("Show More");
+        expect(button).toHaveTextContent("Mystery Button");
     });
 
     test('shows extra paragraph when "Show More" is clicked', () => {
@@ -24,7 +24,7 @@ describe('About component', () => {
         fireEvent.click(button); //to get the show more button 
         fireEvent.click(button); //to get the show less button
         //expect(screen.getByText("If you see this secret message, you get a free donut!")).not.toBeInTheDocument();
-        expect(button).toHaveTextContent("Show More");
+        expect(button).toHaveTextContent("Mystery Button");
     });
 });
 
