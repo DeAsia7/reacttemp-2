@@ -10,16 +10,16 @@ describe('Counter Component', () => {
         const heading = screen.getByText("Count: 0");
         expect(heading).toBeInTheDocument();
     });
-    test('increments count when Add One! button is clicked', () => {
+    test('increments count when "Add One!" button is clicked', () => {
         render(<Counter />);
-        const addButton = screen.getByText('Add One!');
+        const addButton = screen.getByText("Add One!");
         fireEvent.click(addButton);
         const heading = screen.getByText("/Count: 1/i");
         expect(heading).toBeInTheDocument();
     });
-    test('decrements count when Subtract one! button is clicked', () => {
+    test('decrements count when "Subtract one!" button is clicked', () => {
         render(<Counter />);
-        const subtractButton = screen.getByText('Subtract one!');
+        const subtractButton = screen.getByText("Subtract one!");
         fireEvent.click(subtractButton);
        const heading = screen.getByText("/Count: 1/i");
         expect(heading).toBeInTheDocument();

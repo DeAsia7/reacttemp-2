@@ -2,7 +2,7 @@
 import React from 'react';
 import { render, screen, fireEvent} from '@testing-library/react';
 import Navbar from '../Navbar';
-import { MemoryRouter } from 'react-router-dom';
+import { MemoryRouter, useLocation } from 'react-router-dom';
 
 
 const mockedNavigate = jest.fn();
@@ -19,7 +19,7 @@ beforeEach(() => {
 
 describe('Navbar', () => {
     test('show the logout button when user is logged in', () => {
-        render(<Navbar user={{username: 'testuser'}} setUser={jest.fn()} />, { wrapper: MemoryRouter });
+        render(<Navbar user={{username: 'DeAsia'}} setUser={jest.fn()} />, { wrapper: MemoryRouter });
         expect(screen.getByText('Logout/i')).toBeInTheDocument();
 })
 
