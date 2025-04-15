@@ -46,7 +46,7 @@ return (
 
 
 
-        {/*profile page */}
+        {/*profile page,location */}
         
         </ul>
         { user && (

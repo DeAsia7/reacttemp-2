@@ -12,7 +12,7 @@ function About() {
         <h1 className="text-2xl mb-4">Our Goal</h1>
         <p> We want to ensure with every bite you take, you're satifised!</p>
 
-<button onClick={() => setShowMore(!showMore)}       > { showMore ? "Show Less" : "Mystery Button"}</button>
+<button onClick={() => setShowMore(!showMore)}  className=" bg-indigo-900 text-white p-2 rounded hover:bg-green-900 " > { showMore ? "Show Less" : "Mystery Button"}</button>
 
 {showMore && (
     <p>If you see this secret message, you get a free donut! </p>

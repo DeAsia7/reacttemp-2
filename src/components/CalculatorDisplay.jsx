@@ -4,25 +4,12 @@ function CalculatorDisplay({ value }) {
   return (
     <div>
       <div>
-        <h1>Lets calculate how much your donuts will be</h1>
+        <h1 className="text-green-300 text-3xl text-center ">Lets calculate how much your donuts will be</h1>
       </div>
-      <div style={styles.display}>
+      <div className=" p-10 m-5px bg-orange text-xl flex w-60px h-60px rounded-md justify-center ">
           {value}
       </div>
     </div>
   );
-}
-
-const styles = {
-    display: {
-        backgroundColor: 'orange',
-        color: 'green',
-        fontSize: '50px',
-        padding: '10px',
-        textAlign: 'right',
-        marginButton: '10px',
-        borderRadius: '5px',
-    },
 };
-
 export default CalculatorDisplay;
