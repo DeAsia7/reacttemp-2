@@ -39,7 +39,7 @@ describe('Register component', () => {
             target: { value: '12345' },
         });
 
-        fireEvent.click(screen.getByText(/Register/i));
+        fireEvent.click(screen.getByText(/Lets Create An Account!/i));
 
         expect(
             await screen.findByText(/Password must contain at least 1 number/i)).toBeInTheDocument();
@@ -62,6 +62,9 @@ test('succesful registration and send request to DynamoDB and navigate', async (
      fireEvent.change(screen.getByPlaceholderText('/Confirm password/i'), {
     target: { value: 'DeAsia19!' },
 });
+    fireEvent.click(screen.getByText(/Lets Create An Account!/i));
+
+
     await waitFor(() => {
     expect(client.send).toHaveBeenCalled();
     expect(mockedNavigate).toHaveBeenCalledWith('/login');

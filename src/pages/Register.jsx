@@ -47,7 +47,7 @@ if(!validatePassword(password)){
 const command = new PutItemCommand({
     TableName: 'Users',
     Item: {
-        username: {S: username}, 
+        UserName: {S: username}, 
         password: {S: password}
     },
 });

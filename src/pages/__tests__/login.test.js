@@ -19,12 +19,12 @@ describe ('Login component', () => {
         client.send.mockRejectionValueOnce(new Error('AWS Error'));
         render(<Login setUser={mockSetUser} />, 
             { wrapper: MemoryRouter,
-            fireEvent.change(screen.getByPlaceholderText('Username'), {
+            fireEvent.change(screen.getByPlaceholderText('username'), {
                 target: {value: 'DeAsia'},
         })
 
-        fireEvent.change(screen.getByPlaceholderText('Password'), {
-            target: {value: '12345'},
+        fireEvent.change(screen.getByPlaceholderText('password'), {
+            target: {value: 'DeAsia19!'},
         })
 
         fireEvent.click(screen.getByText('Login'));

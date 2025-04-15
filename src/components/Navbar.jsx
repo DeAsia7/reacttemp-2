@@ -44,7 +44,6 @@ return (
 
         <li> <Link to="./Calculator"  className="hover: text-purple-500" onClick={() => setMenuOpen(false)}> Calculator</Link></li>
 
-        <li> <Link to="./Register"  className="hover: text-purple-500" onClick={() => setMenuOpen(false)}> Register</Link></li>
 
 
         {/*profile page */}

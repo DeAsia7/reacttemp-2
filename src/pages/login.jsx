@@ -4,7 +4,7 @@ import { GetItemCommand } from '@aws-sdk/client-dynamodb';
 import { client} from '../utils/awsClient';
 
 
-export default function Login({setUser}) {
+function Login({setUser}) {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
@@ -15,7 +15,7 @@ export default function Login({setUser}) {
         const command = new GetItemCommand({
             TableName: 'Users',
             Key: {
-                'username': {S: username}
+                'UserName': {S: username}
             }
         });
         try {
@@ -50,7 +50,8 @@ export default function Login({setUser}) {
             <button className=" w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600" onClick={handleLogin}>Login Now</button>
             {error && <p style={{color: 'red'}}>{error}</p>}
             <h1 className="text-xl font-bold md-6 text-center" >Dont have a Holy Moly account?</h1>
-           <button className=" bg-indigo-900 text-white p-2 rounded hover:bg-yellow-400"><Link to="/register">Register Now!</Link></button>
+           <button className=" bg-indigo-900 text-white p-2 rounded hover:bg-yellow-400"><Link to="/register">Lets Create An Account!</Link></button>
         </div>
     );
 }
+export default Login;

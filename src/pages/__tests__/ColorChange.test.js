@@ -27,7 +27,7 @@ describe('ColorChange Page', () => {
     test('changes color to blue after 5 seconds', () => {
         render(<ColorChange />);
         act(() => {
-            jest.advanceTimersByTime(3000);
+            jest.advanceTimersByTime(5000);
         })
         const title = screen.getByText(/background color: blue/i);
         expect(title).toBeInTheDocument();
@@ -36,7 +36,7 @@ describe('ColorChange Page', () => {
         expect(container).toHaveClass('bg-blue-500');
     })
 
-    test('changes back to red after another 3 seconds', () => {
+    test('changes back to red after another 5 seconds', () => {
     })
 
     })

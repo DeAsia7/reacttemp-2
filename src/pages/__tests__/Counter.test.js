@@ -14,14 +14,14 @@ describe('Counter Component', () => {
         render(<Counter />);
         const addButton = screen.getByText('Add One!');
         fireEvent.click(addButton);
-        const heading = screen.getByText("Count:+ 1");
+        const heading = screen.getByText("/Count: 1/i");
         expect(heading).toBeInTheDocument();
     });
     test('decrements count when Subtract one! button is clicked', () => {
         render(<Counter />);
         const subtractButton = screen.getByText('Subtract one!');
         fireEvent.click(subtractButton);
-       const heading = screen.getByText("Count:- 1");
+       const heading = screen.getByText("/Count: 1/i");
         expect(heading).toBeInTheDocument();
     });
 
