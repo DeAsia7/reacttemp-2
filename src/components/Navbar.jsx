@@ -32,17 +32,19 @@ return (
         <ul className={`md: flex gap-6 items-center text-gray-700 text-lg font-medium list-none p-0 m-0
          ${menuOpen ? 'block absolute top-[64px] left-0 w-full bg-white px-6 py-4 shadow-md' : "hidden md:flex"}
         }`}>
-        <li> <Link to="./Home"  className="hover: text-purple-500" onClick={() => setMenuOpen(false)}> Home </Link></li>
+        <li> <Link to="./Home"  className="text-blue-500" onClick={() => setMenuOpen(false)}> Home </Link></li>
 
-        <li> <Link to="./About" className="hover: text-purple-500" onClick={() => setMenuOpen(false)}> About Us</Link></li>
+        <li> <Link to="./About" className="text-yellow-500 " onClick={() => setMenuOpen(false)}> About Us</Link></li>
 
-        <li> <Link to="./Contact"  className="hover: text-purple-500" onClick={() => setMenuOpen(false)}> Contact Us</Link></li>
+        <li> <Link to="./Contact"  className="text-pink-600 " onClick={() => setMenuOpen(false)}> Contact Us</Link></li>
 
-        <li> <Link to="./Counter"  className="hover: text-purple-500" onClick={() => setMenuOpen(false)}> Counter</Link></li>
+        <li> <Link to="./Counter"  className=" text-red-500 " onClick={() => setMenuOpen(false)}> Counter</Link></li>
 
-        <li> <Link to="./Colorchange"  className="hover: text-purple-500" onClick={() => setMenuOpen(false)}> Colorchange</Link></li>
+        <li> <Link to="./Colorchange"  className=" text-indigo-500 " onClick={() => setMenuOpen(false)}> Colorchange</Link></li>
 
-        <li> <Link to="./Calculator"  className="hover: text-purple-500" onClick={() => setMenuOpen(false)}> Calculator</Link></li>
+        <li> <Link to="./Calculator"  className=" text-gray-500 " onClick={() => setMenuOpen(false)}> Calculator</Link></li>
+
+        <li><Link to="./login" className="text-grey-500" onClick={() => setMenuOpen(false)} >logout</Link></li>
 
 
 
