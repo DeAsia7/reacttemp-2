@@ -25,25 +25,25 @@ return (
 
 <div className="md:hidden">
     <button onClick={toggleArrowDownToLine}>
-        {ArrowDownToLineOpen ? <X className="w-6 h-6"/> : <ArrowDownToLine className=" w-6 h-6"/>}
+        {ArrowDownToLineOpen ? <X className="w-8 h-8"/> : <ArrowDownToLine className=" w-8 h-8"/>}
     </button>
 </div>
         <ul className={`md: flex gap-6 items-center text-gray-700 text-lg font-medium list-none p-0 m-0
          ${ArrowDownToLineOpen ? 'block absolute top-[64px] left-0 w-full bg-white px-6 py-4 shadow-md' : "hidden md:flex"}
         }`}>
-        <li> <Link to="./Home"  className="text-blue-500" onClick={() => setArrowDownToLine(false)}> Home </Link></li>
+        <li> <Link to="./Home"  className="text-blue-500" onClick={() => setArrowDownToLineOpen(false)}> Home </Link></li>
 
-        <li> <Link to="./About" className="text-yellow-500 " onClick={() => setArrowDownToLine(false)}> About Us</Link></li>
+        <li> <Link to="./About" className="text-yellow-500 " onClick={() => setArrowDownToLineOpen(false)}> About Us</Link></li>
 
-        <li> <Link to="./Contact"  className="text-pink-600 " onClick={() => setArrowDownToLine(false)}> Contact Us</Link></li>
+        <li> <Link to="./Contact"  className="text-pink-600 " onClick={() => setArrowDownToLineOpen(false)}> Contact Us</Link></li>
 
-        <li> <Link to="./Counter"  className=" text-red-500 " onClick={() => setArrowDownToLine(false)}> Counter</Link></li>
+        <li> <Link to="./Counter"  className=" text-red-500 " onClick={() => setArrowDownToLineOpen(false)}> Counter</Link></li>
 
-        <li> <Link to="./Colorchange"  className=" text-indigo-500 " onClick={() => setArrowDownToLine(false)}> Colorchange</Link></li>
+        <li> <Link to="./Colorchange"  className=" text-indigo-500 " onClick={() => setArrowDownToLineOpen(false)}> Colorchange</Link></li>
 
-        <li> <Link to="./Calculator"  className=" text-gray-500 " onClick={() => setArrowDownToLine(false)}> Calculator</Link></li>
+        <li> <Link to="./Calculator"  className=" text-gray-500 " onClick={() => setArrowDownToLineOpen(false)}> Calculator</Link></li>
 
-        <li><Link to="./login" className="text-grey-500" onClick={() => setArrowDownToLine(false)} >logout</Link></li>
+        <li><Link to="./login" className="text-grey-500" onClick={() => setArrowDownToLineOpen(false)} >logout</Link></li>
 
 
 
@@ -51,7 +51,7 @@ return (
         
         </ul>
         { user && (
-        <button onClick={() => {handleLogout(); setArrowDownToLine(false);}} >Logout</button> 
+        <button onClick={() => {handleLogout(); setArrowDownToLineOpen(false);}} >Logout</button> 
         )}
      
     </nav>
