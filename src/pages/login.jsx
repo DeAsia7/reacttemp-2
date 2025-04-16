@@ -54,7 +54,7 @@ function Login({setUser}) {
             <button className=" bg-blue-500 text-white p-2 rounded hover:bg-blue-600" onClick={handleLogin}>Login Now</button>
             {error && <p style={{color: 'red'}}>{error}</p>}
             <h1 className="text-xl font-bold md-6 text-center" >Dont have a Holy Moly account?</h1>
-           <button className="bg-indigo-900 text-white p-2 rounded hover:bg-yellow-400"><Link to="/register">Lets Create An Account!</Link></button>
+           <button className="bg-indigo-900 text-white p-2 rounded hover:bg-yellow-400"><Link to="/Register">Lets Create An Account!</Link></button>
         </div>
         
     );

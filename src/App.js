@@ -13,21 +13,33 @@ import Register from './pages/Register'
 
 
 function App() {
-  const[user, setUser] = useState(null);
+  const[user, setUser] = useState(() => {
+    const savedUser = localStorage.getItem("loggeduser");
+    return savedUser ? JSON.parse(savedUser) : null;
+  });
+
   return (
     <Router>
         <Navbar/>
         <div>
       <Routes>
         <Route path="login" element={<Login setUser={setUser}/>} />
-        <Route path="/register" element={<Register />} /> 
+
+        <Route path="/register" element={ <Register/> } />
+
         <Route path="/Home" element={user ? <Home/> : <Navigate to="/login"/>}/>
+
         <Route path="*" element={<Navigate to= { user ? "/home" : "login" } />} />
-        <Route path="/About" element={<About/>}/>
-        <Route path="/contact" element={<Contact/>}/>
-        <Route path="/counter" element={<Counter/>}/>
-        <Route path="/colorchange" element={<Colorchange/>}/>
-        <Route path="/calculator" element={<Calculator/>}/> 
+
+        <Route path="/About" element={user ? <About/> : <Navigate to="/login" />} />
+
+        <Route path="/contact" element={user ? <Contact/> : <Navigate to="/login" />} />
+
+        <Route path="/counter" element={user ? <Counter/> : <Navigate to="/login" />} />
+
+        <Route path="/colorchange" element={user ? <Colorchange/> : <Navigate to="/login" />} />
+
+        <Route path="/calculator" element={user ? <Calculator/> : <Navigate to="/login" />} /> 
       </Routes>
       </div>
       <Footer/>
