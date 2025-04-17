@@ -24,19 +24,19 @@ jest.mock('react-router-dom', () => ({
 
 describe ('Login component', () => {
     test ('display message login failed on AWS Error', async () => {
-       client.send.mockRejectionValueOnce(new Error('AWS Error'));
+       client.send.mockRejectedValueOnce(new Error('AWS Error'));
         render(<Login setUser={mockSetUser} />, 
             //make sure to close the MemoryRouter
             { wrapper: MemoryRouter});
-            fireEvent.change(screen.getByPlaceholderText('username'), {
+            fireEvent.change(screen.getByPlaceholderText('Enter your username...'), {
                 target: {value: 'DeAsia'},
         });
 
-        fireEvent.change(screen.getByPlaceholderText('password'), {
+        fireEvent.change(screen.getByPlaceholderText('Enter your password...'), {
             target: {value: 'DeAsia19!'},
         });
 
-        fireEvent.click(screen.getByText('Login'));
+        fireEvent.click(screen.getByText('Login Now'));
         await waitFor(() => {
             expect(screen.getByText(/Login failed/i)).toBeInTheDocument();
         });

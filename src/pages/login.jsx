@@ -11,15 +11,18 @@ function Login({setUser}) {
 
     const navigate = useNavigate();
 
-    const handleLogin = async() => {
+    const handleLogin = async(e) => {
+        e.preventDefault();
         const command = new GetItemCommand({
             TableName: 'Users',
             Key: {
-                'UserName': {S: username},
-                'password': {S: password}
+                username: {S: username}
+
             }
         });
+        
         try {
+            
             const response = await client.send(command);
             const user = response.Item;
 
@@ -47,7 +50,7 @@ function Login({setUser}) {
         <div>
     
             <h2 className="text-xl font-bold md-6 text-center ">Login To Your Holy Moly Donut Account</h2>
-            <input className=" p-2 border border-gray-300 rounded mb-4" type="text" placeholder="Enter username..." onChange ={(e) => setUsername(e.target.value)}/> 
+            <input className=" p-2 border border-gray-300 rounded mb-4" type="text" placeholder="Enter your username..." onChange ={(e) => setUsername(e.target.value)}/> 
             <br></br>  
             <input className=" p-2 border border-gray-300 rounded mb-4" type="password" placeholder="Enter your password..." onChange ={(e) =>setPassword(e.target.value)}/>
             <br></br>

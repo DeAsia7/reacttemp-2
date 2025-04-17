@@ -21,7 +21,7 @@ describe('Counter Component', () => {
         render(<Counter />);
         const subtractButton = screen.getByText("Subtract one!");
         fireEvent.click(subtractButton);
-       const heading = screen.getByText(/count: 1/i);
+       const heading = screen.getByText(/count: -1/i);
         expect(heading).toBeInTheDocument();
     });
 

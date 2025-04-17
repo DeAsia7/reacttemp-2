@@ -48,15 +48,17 @@ return (
 
         <li> <Link to="./Calculator"  className=" text-gray-500 " onClick={() => setArrowDownToLineOpen(false)}> Calculator</Link></li>
 
-        <li><Link to="./login" className="text-grey-500" onClick={() => setArrowDownToLineOpen(false)} >logout</Link></li>
 
 
 
         {/*profile page,location */}
         
         </ul>
-        { user && (
+        { user && ( 
+            <div>
+            <li><Link to="/login" className="text-grey-500" onClick={() => setArrowDownToLineOpen(false)} >log Out</Link></li>
         <button onClick={() => {handleLogout(); setArrowDownToLineOpen(false);}} >Logout</button> 
+        </div>
         )}
    </nav>
 );
