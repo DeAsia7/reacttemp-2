@@ -6,7 +6,7 @@ import {ArrowDownToLine, X} from 'lucide-react';
 function Navbar({user, setUser}) {
     const Navigate = useNavigate();
     const [ArrowDownToLineOpen, setArrowDownToLineOpen] = useState(false);
-
+console.log(user)
 
     const handleLogout = () => {
         setUser(null);
@@ -55,10 +55,9 @@ return (
         
         </ul>
         { user && ( 
-            <div>
-            <li><Link to="/login" className="text-grey-500" onClick={() => setArrowDownToLineOpen(false)} >log Out</Link></li>
-        <button onClick={() => {handleLogout(); setArrowDownToLineOpen(false);}} >Logout</button> 
-        </div>
+        
+        <button className="text-grey-500" onClick={() => {handleLogout(); setArrowDownToLineOpen(false);}} >Logout</button> 
+       
         )}
    </nav>
 );

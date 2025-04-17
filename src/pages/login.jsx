@@ -16,7 +16,7 @@ function Login({setUser}) {
         const command = new GetItemCommand({
             TableName: 'Users',
             Key: {
-                username: {S: username}
+                UserName: {S: username}
 
             }
         });

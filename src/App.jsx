@@ -10,7 +10,7 @@ import Colorchange from './pages/Colorchange'
 import Calculator from './pages/Calculator'
 import Login from './pages/login'
 import Register from './pages/Register'
-import {LockKeyhole} from 'lucide-react';
+//import {LockKeyhole} from 'lucide-react';
 
 
 function App() {
@@ -22,7 +22,7 @@ function App() {
   return (
     <Router>
     
-        <Navbar/>
+        <Navbar user={user} setUser={setUser}/>
         <div>
       <Routes>
         <Route path="login" element={<Login setUser={setUser}/>} />
