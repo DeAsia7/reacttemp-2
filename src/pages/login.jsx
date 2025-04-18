@@ -48,16 +48,18 @@ function Login({setUser}) {
 
     return (
         <div 
-        className="min-h-screen bg-gray-100 flex flex-col justify-center items-center px-4 rounded">
+        className="min-h-screen bg-indigo-100 flex flex-col justify-center items-center px-4 rounded">
     
             <h2 className="text-xl font-bold md-6 text-center italic">🅻🅾🅶🅸🅽 🅸🅽🆃🅾 🆈🅾🆄🆁 🅷🅾🅻🆈 🅼🅾🅻🆈 🅳🅾🅽🆄🆃 🅰🅲🅲🅾🆄🅽🆃 </h2>
             <input className=" p-2 border border-gray-300 rounded mb-4" type="text" placeholder="Enter your username..." onChange ={(e) => setUsername(e.target.value)}/> 
             <br></br>  
             <input className=" p-2 border border-gray-300 rounded mb-4" type="password" placeholder="Enter your password..." onChange ={(e) =>setPassword(e.target.value)}/>
             <br></br>
-            <button className=" bg-blue-500 text-white p-2 rounded hover:bg-blue-600" onClick={handleLogin}>Login Now</button>
+            <button className=" bg-orange-300 text-white p-2 rounded hover:bg-blue-600" onClick={handleLogin}>Login Now</button>
             {error && <p style={{color: 'red'}}>{error}</p>}
+            <br></br>
             <h1 className="text-xl font-bold md-6 text-center" >Dont have a Holy Moly account?</h1>
+            <br></br>
            <button className="bg-indigo-900 text-white p-2 rounded hover:bg-yellow-400"><Link to="/Register">Lets Create An Account!</Link></button>
        
         </div>
