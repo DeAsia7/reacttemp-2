@@ -18,7 +18,7 @@ const addVisitor = () => {
 }
 
 return (
-    <div className="min-h-screen bg-gray-100 flex flex-col justify-center items-center px-4">
+    <div className="min-h-screen bg-gray-100 flex flex-col justify-center items-center px-4 rounded">
         <div className="bg-white px-8 rounded shadow-md max-w-xl w-full text-center">
         <h1 className="text-3xl font-bold bf-gradient-to-r from-blue-400 to-orange-300 mb-4">welcome</h1>
         <p className="text-green-500 md-8"> click the button below to increase the counter</p>

@@ -13,8 +13,10 @@ const handleSubmit = (e) => {
 
 
 return ( 
-    <div>
-<h1>Contact Us</h1>
+    <div 
+    className="min-h-screen bg-gray-100 flex flex-col justify-center items-center px-4 rounded">
+    
+<h1 className="text-3xl font-bold text-center">𝕮𝖔𝖓𝖙𝖆𝖈𝖙 𝖀𝖘✍</h1>
 
 
 {submitted ? (
@@ -26,22 +28,23 @@ return (
 
 <form onSubmit={handleSubmit}>
 
-<div>
+
+
     <label>Name</label>
     <input  type = "text" value= {name} onChange= {(e)=> setName(e.target.value)} required/>
-</div>
+<br></br>
 
-<div>
     <label>Email</label>
     <input type = "text" value= {email} onChange= {(e)=> setEmail(e.target.value)} required/>
-</div>
+<br></br>
 
-<div>
     <label>Message</label>
     <input type = "textarea" value= {message} onChange= {(e)=> setMessage(e.target.value)} required/>
-</div>
+
+<br></br>
 
 <button type='submit'>Send Message</button>
+
 
 </form>
 
