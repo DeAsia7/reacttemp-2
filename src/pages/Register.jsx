@@ -63,15 +63,17 @@ const command = new PutItemCommand({
 };
   
 return (
-    <div>
+    <div className="min-h-screen bg-indigo-100 flex flex-col justify-center items-center px-4 rounded">
+        <div className="bg-white px-8 rounded shadow-md max-w-xl w-full text-center">
+
         <h2>Create Your Holy Moly Account</h2>
         <input  type="text" placeholder="Enter username..." onChange ={(e) => setUsername(e.target.value)}/>   
         <input  type="password" placeholder="Enter your password..." onChange ={(e) =>setPassword(e.target.value)}/>
         <input  type="password" placeholder="Confirm your password..." onChange ={(e) =>setConfirm(e.target.value)}/>
-        <button onClick={handleRegister}>Lets Create An Account!</button>
+        <button  className="px-8 rounded shadow-md max-w-xl w-full text-center bg-yellow-200" onClick={handleRegister}>Lets Create An Account!</button>
         {error && <p style={{color: 'red'}}>{error}</p>}
     </div>
-
+</div>
 )
 
 
