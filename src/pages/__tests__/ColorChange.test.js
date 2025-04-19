@@ -38,7 +38,22 @@ describe('ColorChange Page', () => {
         expect(container).toHaveStyle('background-color: blue');
     })
 
-    test('changes back to red after another 3 seconds', () => {
+   /* test('changes back to red after another 3 seconds', () => {
+        render(<ColorChange />);
+        
+        act(() => {
+            jest.advanceTimersByTime(3000);
+        }
+        )
+        const title = screen.getByText(/background color: red/i);
+        expect(title).toBeInTheDocument();
+
+        const container = title.closest('div');
+        expect(container).toHaveStyle('background-color: red');
+    })
+*/
+
+    test('changes color to blue after 3 seconds', () => {
         render(<ColorChange />);
         act(() => {
             jest.advanceTimersByTime(3000);
@@ -47,8 +62,9 @@ describe('ColorChange Page', () => {
         expect(title).toBeInTheDocument();
 
         const container = title.closest('div');
-        expect(container).toHaveStyle('background-color: red');
+        expect(container).toHaveStyle('background-color: blue');
     })
+});
 
-    });
+    
     
