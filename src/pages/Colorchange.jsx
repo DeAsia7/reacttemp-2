@@ -7,13 +7,12 @@ const [color, setColor] = useState("red");
 
 useEffect(() => {
     const interval = setInterval(() => {
-        // Change the color every 5 seconds
-        setColor((previousColor) = (previousColor === 'red' ? 'blue' : 'red'));
-    } , 5000);
+        setColor((previousColor) => (previousColor === 'red' ? 'blue' : 'red'));
+    } , 3000);
     },[])
 
     return(
-<div style={{backgroundColor: color, height: "100%", transition: "0.5s"}}>
+<div style={{backgroundColor: color, height: "100%", transition: "0.3s"}}>
     <h1>Background Color: {color}</h1>
 </div>
 

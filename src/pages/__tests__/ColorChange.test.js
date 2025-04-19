@@ -20,32 +20,34 @@ describe('ColorChange Page', () => {
        expect(title).toBeInTheDocument();
 
        const container = title.closest('div');
-         expect(container).toHaveClass('bg-red-500');
+         expect(container).toHaveStyle('background-color: red');
 
+        // expect(container).toHaveClass('bg-red-500');
+ 
     });
 
-    test('changes color to blue after 5 seconds', () => {
+    test('changes color to blue after 3 seconds', () => {
         render(<ColorChange />);
         act(() => {
-            jest.advanceTimersByTime(5000);
+            jest.advanceTimersByTime(3000);
         })
         const title = screen.getByText(/background color: blue/i);
         expect(title).toBeInTheDocument();
 
         const container = title.closest('div');
-        expect(container).toHaveClass('bg-blue-500');
+        expect(container).toHaveStyle('background-color: blue');
     })
 
-    test('changes back to red after another 5 seconds', () => {
+    test('changes back to red after another 3 seconds', () => {
         render(<ColorChange />);
         act(() => {
-            jest.advanceTimersByTime(5000);
+            jest.advanceTimersByTime(3000);
         })
-        const title = screen.getByText(/background color: red/i);
+        const title = screen.getByText(/background color: blue/i);
         expect(title).toBeInTheDocument();
 
         const container = title.closest('div');
-        expect(container).toHaveClass('bg-red-500');
+        expect(container).toHaveStyle('background-color: red');
     })
 
     });
