@@ -44,10 +44,8 @@ return (
 
         <li> <Link to="./Calculator"  className=" text-gray-500 " onClick={() => setArrowDownToLineOpen(false)}> Calculator</Link></li>
 
+        <li> <Link to="./Location"  className="text-green-500 " onClick={() => setArrowDownToLineOpen(false)}> Locations</Link></li>
 
-
-
-        {/*profile page,location */}
         
         </ul>
         { user && ( 

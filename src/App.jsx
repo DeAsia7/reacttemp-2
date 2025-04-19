@@ -42,6 +42,10 @@ function App() {
         <Route path="/colorchange" element={ user ? <Colorchange/> : <Navigate to ="/login" />}/>
 
         <Route path="/calculator" element={ user ? <Calculator/> : <Navigate to ="/login" />}/> 
+
+        <Route path="/location" element={ user ? <Location/> : <Navigate to ="/login" />}/>
+
+      
       </Routes>
       </div>
      
