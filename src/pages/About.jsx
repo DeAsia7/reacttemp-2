@@ -15,7 +15,12 @@ function About() {
         </div>
        <div><h1 className="text-2xl mb-4">Our Mission</h1>
         <p> We want to ensure with every bite you take, you're satifised!</p>
-        </div>
+</div>
+       {/* <video width="320" height="240" autoplay muted>
+        <source src="https://youtu.be/anztA2il5oo?si=GtSo8UwAnn9aNFfq" type="video/mp4" />
+        Your browser does not support the video tag.
+        </video> */}
+
         
 <div >
 <button onClick={() => setShowMore(!showMore)}  className=" bg-indigo-900 text-white p-2 rounded hover:bg-green-900 " > { showMore ? "Show Less" : "Mystery Button"}</button>
@@ -23,9 +28,9 @@ function About() {
 {showMore && (
     <p>If you see this secret message, you get a free donut! </p>
 )}
+
 </div>
     </div>
-    )
-};
+  )  };
 
 export default About;

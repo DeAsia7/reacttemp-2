@@ -15,11 +15,7 @@ console.log(user)
     };
 
     const toggleArrowDownToLine = () => setArrowDownToLineOpen(!ArrowDownToLineOpen);
-    const isActive = (path) => location.pathname === path; 
-    const LinkClass = (path) => {
-        `${isActive(path) ? 'text-indigo-500 italic border-b-2 border-blue-500' : 'hover: text-gray-500'} transition-all pb-1`
-       //` ${isActive(path) ? 'text-red-500  italic border-b-2 border-blue-500' : 'hover: text-gray-500'} transition-all pb-1`
-    }
+    
 
 return (
   
@@ -44,7 +40,7 @@ return (
 
         <li> <Link to="./Counter"  className=" text-red-500 " onClick={() => setArrowDownToLineOpen(false)}> Counter</Link></li>
 
-        <li> <Link to="./Colorchange"  className={LinkClass("/Colorchange")} onClick={() => setArrowDownToLineOpen(false)}> Colorchange</Link></li>
+        <li> <Link to="./Colorchange"  className="text-indigo-500" onClick={() => setArrowDownToLineOpen(false)}> Colorchange</Link></li>
 
         <li> <Link to="./Calculator"  className=" text-gray-500 " onClick={() => setArrowDownToLineOpen(false)}> Calculator</Link></li>
 

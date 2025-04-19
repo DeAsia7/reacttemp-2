@@ -4,18 +4,21 @@ import React, { useState, useEffect} from 'react';
 
 function Colorchange (){
 const [color, setColor] = useState("red");
-const [isClicked, setIsClicked] = useState(false);
 
 useEffect(() => {
     const interval = setInterval(() => {
-        setColor((previousColor) = (previousColor === "red" ? "blue" : "red"));
-    } , 1000);
+        // Change the color every 5 seconds
+        setColor((previousColor) = (previousColor === 'red' ? 'blue' : 'red'));
+    } , 5000);
     },[])
 
-    useEffect(() => {
-        setColor((previousColor) => (previousColor === "red" ? "blue" : "red"));
-    }
-);
+    return(
+<div style={{backgroundColor: color, height: "100%", transition: "0.5s"}}>
+    <h1>Background Color: {color}</h1>
+</div>
+
+    );
+
 }
 
 export default Colorchange;
