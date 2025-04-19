@@ -12,10 +12,11 @@ useEffect(() => {
     },[])
 
     return(
-<div style={{backgroundColor: color, height: "100%", transition: "0.3s"}}>
+        <div className="min-h-screen text-center">
+<div style={{backgroundColor: color, height: "800px", transition: "0.3s"}}>
     <h1>Background Color: {color}</h1>
 </div>
-
+</div>
     );
 
 }

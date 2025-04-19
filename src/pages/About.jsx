@@ -5,7 +5,7 @@ function About() {
 
     return (
        
-    <div className="grid grid-cols-3 divide-x divide-green-500 ">
+    <div className="grid grid-cols-3 divide-x divide-green-500 min-h-screen">
        
         <div><h1 className="text-3xl mb-4">  About Us</h1>
         <p >holy moly donut shop has been around for generations and we're proud to say its made from scratch. </p>

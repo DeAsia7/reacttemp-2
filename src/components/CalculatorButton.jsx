@@ -3,7 +3,7 @@ import React from 'react';
 function CalculatorButton({ label, onClick }) {
   return (
     <div className="text-white">
-    <button onClick={() => onClick(label)}>{label}</button>
+    <button className="p-2 grid grid-col-3 " onClick={() => onClick(label)}>{label}</button>
     </div>
   );
 };

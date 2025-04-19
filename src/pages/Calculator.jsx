@@ -41,7 +41,7 @@ const handleClick = (value) => {
 };
 
 return(
-    <div className="bg-gray-900">
+    <div className="bg-gray-900 min-h-screen">
         <CalculatorDisplay value={input || result || "0" }  />
 
         <div className="text-2xl grid grid-cols-4 flex justify center">
