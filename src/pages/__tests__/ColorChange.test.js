@@ -38,7 +38,7 @@ describe('ColorChange Page', () => {
         expect(container).toHaveStyle('background-color: blue');
     })
 
-   /* test('changes back to red after another 3 seconds', () => {
+   test('changes back to red after another 3 seconds', () => {
         render(<ColorChange />);
         
         act(() => {
@@ -51,7 +51,7 @@ describe('ColorChange Page', () => {
         const container = title.closest('div');
         expect(container).toHaveStyle('background-color: red');
     })
-*/
+
 
     test('changes color to blue after 3 seconds', () => {
         render(<ColorChange />);
