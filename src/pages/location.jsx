@@ -2,7 +2,7 @@ import React from "react";
 
 function Location() {
 
-    return(
+   
     <div className="grid grid-cols-3 divide-x divide-green-500 min-h-screen bg-blue-100">
 
 
@@ -10,7 +10,7 @@ function Location() {
 
   <p>We have a variety of locations across the states</p>
 </div>
-    )
+    
 };
 
 export default Location;
