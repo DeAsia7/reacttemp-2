@@ -41,10 +41,10 @@ const handleClick = (value) => {
 };
 
 return(
-    <div className="bg-gray-900 min-h-screen">
+    <div style={styles.container}>
         <CalculatorDisplay value={input || result || "0" }  />
 
-        <div className="text-2xl grid grid-cols-4 flex justify center">
+        <div style={styles.buttonGrid}>
         
                 {["7", "8", "9", "/"].map((labelItem) => ( 
                     <CalculatorButton Key={labelItem} label={labelItem} onClick={handleClick} /> 
@@ -64,9 +64,21 @@ return(
 );
 }
 
-
-
-
+const styles = {
+    container:{
+        width: ' 600,px',
+        margin: '50px auto',
+        padding: '10px',
+        borderRadius: ' 10px',
+        backgroundColor: 'purple',
+        textAlign: 'center',
+    },
+    buttonGrid:{
+        display:'grid',
+        gridTemplateColumns: 'repeat(4,1fr)',
+        gap: '10px',
+    }
+}
 
 
 export default Calculator;

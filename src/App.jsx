@@ -10,7 +10,7 @@ import Colorchange from './pages/Colorchange'
 import Calculator from './pages/Calculator'
 import Login from './pages/login'
 import Register from './pages/Register'
-import Location from './pages/Location'
+import Location from './pages/location'
 //import {LockKeyhole} from 'lucide-react';
 
 
