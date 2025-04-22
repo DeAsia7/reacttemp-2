@@ -14,7 +14,7 @@ useEffect(() => {
     return(
         <div className="min-h-screen text-center">
 <div style={{backgroundColor: color, height: "800px", transition: "0.3s"}}>
-    <h1>Background Color: {color}</h1>
+    <h1 className="text-3xl ">Background Color: {color}</h1>
 </div>
 </div>
     );
