@@ -14,7 +14,7 @@ function About() {
         <div><h1 className="text-3xl mb-4 text-green-300 italic"> Our Community </h1>
         <p className="text-purple-500"> Every morning a new batch is made and if we have any left over by the end of the day, we will try our best to hand them to someone in need. We're also giving back to our communities through fundraising and philanthropic work. </p>
         </div>
-        
+
        <div><h1 className="text-2xl mb-4 text-gray-500 italic">Our Mission</h1>
         <p className="text-pink-600 font-serif"> We want to ensure with every bite you take, you're satifised!</p>
 </div>
