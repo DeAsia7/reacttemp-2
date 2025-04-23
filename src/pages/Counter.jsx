@@ -13,7 +13,7 @@ function Counter(){
         return (
             <div className="background-image-donutapr21.jpg">
             <div className="min-h-screen bg-pink-100 flex flex-col justify-center items-center px-4 rounded">
-            <div className="bg-green-100 px-8 rounded shadow-md max-w-xl w-full text-center">
+            <div className="bg-green-100 px-10 rounded shadow-md max-w-xl w-full text-center">
                 <h1>How many donuts would you like</h1>
                 <h3> Count: {count}</h3>
                 <br></br>
